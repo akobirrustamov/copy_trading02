@@ -1,0 +1,65 @@
+# ========== Global ignores ==========
+*.log
+*.tmp
+*.swp
+.DS_Store
+.env
+.env.*.local
+node_modules/
+.idea/
+.vscode/
+dist/
+build/
+coverage/
+*.iml
+
+# ========== React (frontend) ==========
+/frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/build/
+frontend/.turbo/
+frontend/.eslintcache
+
+# ========== Java (backend) ==========
+/backend/target/
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.env
+/backend/.mvn/
+!/backend/.mvn/wrapper/maven-wrapper.jar
+/backend/mvnw
+/backend/mvnw.cmd
+
+# Eclipse/IDEA/NetBeans related
+**/.idea/
+**/.project
+**/.classpath
+**/.settings/
+**/.metadata/
+**/bin/
+**/out/
+**/logs/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========== Optional (generated docs, reports, etc) ==========
+/docs/
+/*.pdf
+/*.docx
+
+# ========== Package lock files (optional, if monorepo-managed) ==========
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+

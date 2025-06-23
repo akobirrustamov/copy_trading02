@@ -1,0 +1,26 @@
+.statisticClass{
+    
+    height: 100%;
+ 
+}
+.divFlex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit{
+    border-radius: 10px;
+    border: 1px;
+    color: white;
+    padding: 5px 10px;
+    background-color:black;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
