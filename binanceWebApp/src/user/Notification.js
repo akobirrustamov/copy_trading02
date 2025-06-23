@@ -6,8 +6,8 @@ import statisticPhoto from "../images/monitoring.png";
 
 function Notification(props) {
     const [message, setMessage]=useState([])
-    const {userTelegram, tg} = useTelegram();
-    // const userTelegram={id:5774477233}
+    // const {userTelegram, tg} = useTelegram();
+    const userTelegram={id:5774477233}
 
     const navigate=useNavigate()
     useEffect(() => {

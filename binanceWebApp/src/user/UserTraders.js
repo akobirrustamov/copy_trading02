@@ -6,8 +6,8 @@ import {useNavigate} from "react-router-dom";
 
 function UserTraders(props) {
      const [admins, setAdmins]=useState([])
-      const {userTelegram, tg} = useTelegram();
-    // const userTelegram={id:5397857416}
+    //   const {userTelegram, tg} = useTelegram();
+    const userTelegram={id:5397857416}
 
     const navigate=useNavigate()
     useEffect(() => {

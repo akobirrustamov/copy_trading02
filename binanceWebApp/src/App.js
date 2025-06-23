@@ -20,30 +20,32 @@ import MyComponent from "./myFirstProject/bitgetapi";
 
 function App() {
   return (
-    <div className="ag-format-container" style={{backgroundColor: '#100231', width: '100%', minHeight:'750px'}}>
-
+    <div className="ag-format-container" style={{
+      backgroundColor: '#100231', width: '100%', height: "auto", minHeight: '100vh',
+      height: 'auto'
+    }}>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/admins" element={<Admin/>} />
-        <Route path="/users" element={<Users/>} />
-        <Route path="/traders" element={<Statistic/>} />
-        <Route path="/userform" element={<Userform/>} />
-        <Route path="/notification" element={<Notification/>} />
-        <Route path="/usertraders" element={<UserTraders/>} />
-        <Route path="/forme" element={<ForMe/>}/>
-        <Route path="/echobot/pnl/:telegram_id" element={<ShowImagePage/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/admins" element={<Admin />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/traders" element={<Statistic />} />
+        <Route path="/userform" element={<Userform />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/usertraders" element={<UserTraders />} />
+        <Route path="/forme" element={<ForMe />} />
+        <Route path="/echobot/pnl/:telegram_id" element={<ShowImagePage />} />
         {/*<Route path="/download" element={<Download/>} />*/}
         <Route path="/download" element={<Download />} />
-        <Route path="/404" element={<ErrorPage/>} />
+        <Route path="/404" element={<ErrorPage />} />
         {/*south korea*/}
         <Route path="/newtraders" element={<Traders />} />
         <Route path="/mypage" element={<MyComponent />} />
 
       </Routes>
-    </div> 
-      
-   
+    </div>
+
+
   );
 
-  }
+}
 export default App;

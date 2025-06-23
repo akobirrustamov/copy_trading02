@@ -6,12 +6,12 @@ import '../pages/style.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import { useTelegram } from '../hooks/useTelegram';
+// import { useTelegram } from '../hooks/useTelegram';
 import ApiCall from "../ApiCall/ApiCall";
 
 function Statistic(props) {
-    const {userTelegram} = useTelegram();
-    // const userTelegram = { id: 8558293763 };
+    // const {userTelegram} = useTelegram();
+    const userTelegram = { id: 8558293763 };
     const navigate = useNavigate();
     const [showRodal, setShowRodal] = useState(false);
     const [admins, setAdmins] = useState([]);
@@ -97,7 +97,7 @@ function Statistic(props) {
             <div className="ag-courses_box ">
                 <div id="wrapper">
                     <div className="divFlex">
-                        <h1 style={{ paddingTop: "8px", color:"white" }}>Traders</h1>
+                        <h1 style={{ paddingTop: "8px", color: "white" }}>Traders</h1>
                         {admins.length < 10 && (
                             <button onClick={() => setShowRodal(true)} className="submit">
                                 + Add
@@ -107,32 +107,32 @@ function Statistic(props) {
                     <div>
                         <table id="keywords" className="table border-0 text-white">
                             <thead>
-                            <tr>
-                                <th>№</th>
-                                <th>
-                                    <span>Name</span>
-                                </th>
-                                <th>
-                                    <span>UID</span>
-                                </th>
-                                <th></th>
-                            </tr>
+                                <tr>
+                                    <th>№</th>
+                                    <th>
+                                        <span>Name</span>
+                                    </th>
+                                    <th>
+                                        <span>UID</span>
+                                    </th>
+                                    <th></th>
+                                </tr>
                             </thead>
                             <tbody>
-                            {admins.map((item, index) => (
-                                <tr key={item.uid}>
-                                    <td>{index + 1}</td>
-                                    <td className="lalign" style={{ fontSize: '18px' }}>
-                                        {item.tradername}
-                                    </td>
-                                    <td style={{ fontSize: '14px' }} onClick={() => { setInfo(item); setShowInfo(true); }}>
-                                        {item.uid.substring(0, 4)}...
-                                    </td>
-                                    <td onClick={() => deleteAdmin(item.uid)}>
-                                        <img width={30} src={binPhoto} alt="..." />
-                                    </td>
-                                </tr>
-                            ))}
+                                {admins.map((item, index) => (
+                                    <tr key={item.uid}>
+                                        <td>{index + 1}</td>
+                                        <td className="lalign" style={{ fontSize: '18px' }}>
+                                            {item.tradername}
+                                        </td>
+                                        <td style={{ fontSize: '14px' }} onClick={() => { setInfo(item); setShowInfo(true); }}>
+                                            {item.uid.substring(0, 4)}...
+                                        </td>
+                                        <td onClick={() => deleteAdmin(item.uid)}>
+                                            <img width={30} src={binPhoto} alt="..." />
+                                        </td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>

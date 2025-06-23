@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import {useTelegram} from "../hooks/useTelegram";
 import rasm1 from './important.png'
 function Userform(props) {
-      const {userTelegram, tg, onClose} = useTelegram();
-     // const userTelegram={id:5397857416}
+    //   const {userTelegram, tg, onClose} = useTelegram();
+     const userTelegram={id:5397857416}
     // function onClose(){}
     const navigate=useNavigate()
     const [birja, setBirja]=useState(0)
@@ -208,7 +208,7 @@ function Userform(props) {
 
         const result = await ApiCall('/api/v1/userjon/setting', 'put', data);
         if (!result.error) {
-            onClose()
+            // onClose()
             // If the admin is added successfully, close the modal and refresh the admin list
         } else {
             toast.error('Please enter your details completely!', {
