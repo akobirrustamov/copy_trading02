@@ -26,7 +26,7 @@ function Statistic(props) {
         tradername: '',
         uid: '',
         trader_status: 0,
-        trader_type:1
+        trader_type: 1
     });
     useEffect(() => {
         if (userTelegram?.id == undefined) {
@@ -572,7 +572,7 @@ function Statistic(props) {
                 {/* Add Trader Modal */}
                 <Rodal
                     width={Math.min(400, window.innerWidth - 40)}
-                    height={350}
+                    height={window.innerHeight > 768 ? 300 : 380}
                     visible={showRodal}
                     onClose={() => setShowRodal(false)}
                     customStyles={{
@@ -659,7 +659,7 @@ function Statistic(props) {
                             />
                         </div>
 
-                        <div style={{ marginTop: 'auto' }}>
+                        <div style={{ marginTop: '30px' }}>
                             <button
                                 type="submit"
                                 style={{
