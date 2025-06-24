@@ -126,6 +126,10 @@
 /* Modal Styles */
 .modal-content {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .modal-title {
@@ -138,6 +142,7 @@
 .admin-form {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 20px;
 }
 
@@ -172,7 +177,8 @@
   display: flex;
   justify-content: flex-end;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: auto;
+  padding-top: 5px;
 }
 
 .save-btn {
@@ -185,6 +191,7 @@
   cursor: pointer;
   transition: all var(--transition-speed) ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
 }
 
 .save-btn:hover {
@@ -221,12 +228,14 @@
   }
 
   .form-actions {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .save-btn,
   .cancel-btn {
-    width: 100%;
+    width: 48%;
+    min-width: auto;
   }
 }
 
@@ -259,4 +268,19 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.Rodal {
+  box-sizing: border-box;
+}
+
+.Rodal-dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.Rodal-content {
+  flex: 1;
+  overflow-y: auto;
 }

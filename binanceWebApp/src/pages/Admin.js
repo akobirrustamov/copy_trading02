@@ -146,7 +146,6 @@ function Admin(props) {
                 }}
             />
             <Header name='admins' />
-
             <div className="admin-content">
                 <div className="admin-header">
                     <motion.h1
@@ -239,7 +238,8 @@ function Admin(props) {
                             borderRadius: '12px',
                             padding: '25px',
                             background: 'var(--card-bg)',
-                            border: '1px solid var(--border-color)'
+                            border: '1px solid var(--border-color)',
+                            boxSizing: 'border-box'
                         }}
                     >
                         <motion.div
