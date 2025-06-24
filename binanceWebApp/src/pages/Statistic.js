@@ -20,11 +20,13 @@ function Statistic(props) {
     const [admins, setAdmins] = useState([])
     const [showInfo, setShowInfo] = useState(false)
     const [info, setInfo] = useState({})
+    const [traderType, setTraderType] = useState(1)
     const [traderStatus, setTraderStatus] = useState(0)
     const [newAdmin, setNewAdmin] = useState({
         tradername: '',
         uid: '',
-        trader_status: 0
+        trader_status: 0,
+        trader_type:1
     });
     useEffect(() => {
         if (userTelegram?.id == undefined) {
@@ -51,6 +53,7 @@ function Statistic(props) {
     const handleAddAdmin = async (event) => {
         event.preventDefault();
         newAdmin.trader_status = traderStatus;
+        newAdmin.trader_type = traderType;
         console.log(newAdmin)
         try {
             const result = await ApiCall('/api/v1/traders', 'post', newAdmin);
@@ -140,12 +143,13 @@ function Statistic(props) {
                             background: 'linear-gradient(90deg, #4361ee, #3a0ca3)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent'
-                        }}>Our Picks</h1>
+                        }}>Binance Traders</h1>
                         {admins.length <= 11 && (
                             <button
                                 onClick={() => {
                                     setShowRodal(true);
                                     setTraderStatus(0);
+                                    setTraderType(1)
                                 }}
                                 style={{
                                     backgroundColor: '#4361ee',
@@ -283,12 +287,13 @@ function Statistic(props) {
                             background: 'linear-gradient(90deg, #4895ef, #3f37c9)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent'
-                        }}>Member's Picks</h1>
+                        }}>HyperLiquid Traders</h1>
                         {admins.length <= 11 && (
                             <button
                                 onClick={() => {
                                     setShowRodal(true);
                                     setTraderStatus(1);
+                                    setTraderType(2)
                                 }}
                                 style={{
                                     backgroundColor: '#4895ef',

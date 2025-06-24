@@ -29,17 +29,18 @@ function App() {
         <Route path="/admins" element={<Admin />} />
         <Route path="/users" element={<Users />} />
         <Route path="/traders" element={<Statistic />} />
+
+
+
         <Route path="/userform" element={<Userform />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/usertraders" element={<UserTraders />} />
-        <Route path="/forme" element={<ForMe />} />
-        <Route path="/echobot/pnl/:telegram_id" element={<ShowImagePage />} />
-        {/*<Route path="/download" element={<Download/>} />*/}
-        <Route path="/download" element={<Download />} />
+        {/*<Route path="/echobot/pnl/:telegram_id" element={<ShowImagePage />} />*/}
+        {/*<Route path="/download" element={<Download />} />*/}
         <Route path="/404" element={<ErrorPage />} />
-        {/*south korea*/}
-        <Route path="/newtraders" element={<Traders />} />
-        <Route path="/mypage" element={<MyComponent />} />
+
+
+
 
       </Routes>
     </div>

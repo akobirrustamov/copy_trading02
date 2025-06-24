@@ -24,7 +24,7 @@ public class BotTradersServiceImpl implements BotTradersService {
         if (tradesDto.getTradername().equals("") || tradesDto.getUid().equals("")){
             return ResponseEntity.ok("Error");
         }
-        botTradersRepository.save(new BotTraders(tradesDto.getUid(), tradesDto.getTradername(),"", 0, tradesDto.getTrader_status()));
+        botTradersRepository.save(new BotTraders(tradesDto.getUid(), tradesDto.getTradername(),"", 0, tradesDto.getTrader_status(),tradesDto.getTrader_type()));
         return ResponseEntity.ok("Saved successfully");
     }
 

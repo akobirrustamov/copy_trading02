@@ -16,4 +16,7 @@ public interface BotTradersRepository extends JpaRepository<BotTraders, String> 
             "LEFT JOIN subscriber s ON t.uid = s.traderuid AND s.telegram_id = :userId", nativeQuery = true)
     List<TradersForUserDto> getTradersForUser(@Param("userId") BigInteger userId);
 
+
+    @Query(value = "select * from traders where trader_type=1", nativeQuery = true)
+    List<BotTraders> findAllByTraderTYpe();
 }

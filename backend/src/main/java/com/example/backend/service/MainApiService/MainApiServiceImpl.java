@@ -32,7 +32,8 @@ public class MainApiServiceImpl implements MainApiService {
     @Override
     public void goWork() throws IOException {
         System.out.printf("Go Work\n");
-        List<BotTraders> all = botTradersRepository.findAll();
+        List<BotTraders> all = botTradersRepository.findAllByTraderTYpe();
+        System.out.println(all);
         for (BotTraders botTraders : all) {
             Response response = rapidApi(botTraders.getUid());
             String responseBody = response.getResponseBody();

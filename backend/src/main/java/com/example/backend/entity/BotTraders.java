@@ -24,5 +24,6 @@ public class BotTraders {
     private String traderpositions;
     private Integer pnl_trade;
     private Integer trader_status;
+    private Integer trader_type;
 
 }
