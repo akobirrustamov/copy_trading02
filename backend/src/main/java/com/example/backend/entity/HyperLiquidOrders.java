@@ -27,6 +27,5 @@ public class HyperLiquidOrders {
     private String coin;
     private String limit_price;
     private String size;
-
-
+    
 }
